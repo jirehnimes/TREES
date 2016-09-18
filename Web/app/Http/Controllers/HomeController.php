@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 use App\SensorDatum;
+use App\Tree;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,12 @@ class HomeController extends Controller
     public function index()
     {
         $aSensorData = SensorDatum::all();
-        return view('home', ['aSensorData' => $aSensorData]);
+        $aTrees = Tree::all();
+        $aData = array(
+            'aSensorData' => $aSensorData,
+            'aTrees' => $aTrees
+        );
+
+        return view('home', $aData);
     }
 }

@@ -15,11 +15,9 @@
 
 Route::auth();
 Route::get('/', 'HomeController@index');
-// Route::get('/home', 'HomeController@index');
+Route::get('/analytics', 'AnalyticsController@show');
+Route::get('/reports', 'ReportsController@display');
 
-// Route::group(['namespace' => 'Web'], function()
-// {
-// });
 
 // API Routes
 
@@ -31,3 +29,6 @@ Route::group(['prefix' => 'api'], function () {
     Route::post('sensor', 'SensorDataController@store');
 
 });
+
+
+

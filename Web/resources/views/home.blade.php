@@ -12,6 +12,7 @@
 	<script src="js/home.js"></script>
 	<script type="text/javascript">
 		var aSensorData = {!! json_encode($aSensorData) !!};
+		var aTrees = {!! json_encode($aTrees) !!};
 	</script>
 @stop
 
@@ -38,14 +39,18 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="box box-default collapsed-box">
-								<div class="box-header with-border">
-									<h3 class="box-title">Expandable</h3>
+								<div class="box-header with-border bg-green-active">
+									<h3 class="box-title">List of Involved Companies</h3>
 									<div class="box-tools pull-right">
 										<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
 									</div>
 								</div>
 								<div class="box-body">
-									The body of the box
+									<p class="text-green">Company 1</p> <br>
+									<p class="text-green">Company 2</p> <br>
+									<p class="text-green">Company 3</p> <br>
+									<p class="text-green">Company 4</p> <br>
+									<p class="text-green">Company 5</p> <br>
 								</div>
 							</div>
 						</div>

@@ -101,7 +101,7 @@ return [
     |
     */
 
-    'menu' => [
+   'menu' => [
         'MAIN NAVIGATION',
         [
             'text' => 'Blog',
@@ -115,8 +115,23 @@ return [
         ],
         [
             'text'        => 'Analytics',
-            'url'         => '/',
             'icon'        => 'bar-chart',
+            'submenu' => [
+                 [
+                     'text' => 'Real-Time Report',
+                     'url'  => '/analytics',
+                     'icon' => 'line-chart'
+                 ],
+                 [
+                     'text' => 'Reports List',
+                     'url'  => '/reports',
+                 ],
+            ]
+        ],
+        [
+            'text'        => 'Events',
+            'url'         => '/events',
+            'icon'        => 'calendar ',
         ],
         'ACCOUNT SETTINGS',
         [

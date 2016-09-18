@@ -15,6 +15,9 @@ class CreateTreesTable extends Migration
         Schema::create('trees', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->integer('age');
+            $table->decimal('x_coordinate', 13, 6);
+            $table->decimal('y_coordinate', 13, 6);
             $table->timestamps();
         });
     }

@@ -41,12 +41,9 @@ function GoogleMapsApi() {
 	 * @param  object oLocation latitude and longitude of marker
 	 * @return mixed
 	 */
-	this.createMarker = function(sTitle = '', oLocation = this._oLocation) {
+	this.createMarker = function(oOption) {
 		if (google) {
-			var _oMarker = new google.maps.Marker({
-				position: oLocation,
-				title: sTitle
-			});
+			var _oMarker = new google.maps.Marker(oOption);
 
 			_oMarker.setMap(this._map);
 			
@@ -208,7 +205,7 @@ function GoogleMapsApi() {
 	 * @param  string sName variable name
 	 * @return
 	 */
-	this.loadGeoJson = function(sFile, aData, oInfoBox) {
+	this.loadGeoJson = function(sFile, aData, aTrees, oInfoBox) {
 		var _that = this;
 		var _aFeatures = sFile.features;
 		var _stateLayer = new google.maps.Data();

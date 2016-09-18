@@ -18,8 +18,10 @@ if (gMap.init(map, oMap).loadMap()) {
 $(function() {
 	// Local variables
 
+	console.log(aTrees);
+
 	// Collection of markers
-	var aMarkers = [];
+	var aTreeMarkers = [];
 
 	// GeoJson of Montalban
 	var oMontalban = {};
@@ -67,9 +69,25 @@ $(function() {
 	var oCenterMapBtn = gMap.createControlBtn(oCenterMapDiv, oCenterMapFunc, oCenterMapBtnProp, oCenterMapBtnTextProp)
 		.addControlBtn();
 
+	// For GeoJSON Data
 	$.getJSON('geojson/MONTALBAN.json', function(oResults) {
 		oMontalban = oResults;
-		gMap.loadGeoJson(oMontalban, aSensorData, oInfoBox);
+		gMap.loadGeoJson(oMontalban, aSensorData, aTrees, oInfoBox);
+	});
+
+	// Load tree markers
+	aTrees.forEach(function(oItem, iIndex) {
+		var _oLocation = {
+			lat: parseFloat(oItem.x_coordinate),
+			lng: parseFloat(oItem.y_coordinate)
+		};
+		var _oOptions = {
+			position: _oLocation,
+			title: oItem.name,
+			icon: 'img/tree.png'
+		}
+
+		aTreeMarkers.push(gMap.createMarker(_oOptions));
 	});
 
 });
