@@ -15,9 +15,10 @@ class CreateSensorDataTable extends Migration
         Schema::create('sensor_data', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('company_id');
-            $table->integer('phone_number')->unique();
-            $table->float('x_coordinate');
-            $table->float('y_coordinate');
+            // $table->string('phone_number')->unique();
+            $table->string('phone_number');
+            $table->decimal('x_coordinate', 13, 6);
+            $table->decimal('y_coordinate', 13, 6);
             $table->float('particle');
             $table->float('co2');
             $table->float('temperature');

@@ -1,0 +1,14 @@
+.login-page {
+	background: 
+		linear-gradient(
+			rgba(0, 0, 0, 0.45), 
+			rgba(0, 0, 0, 0.45)
+		),
+    	url('/img/background.jpg');
+	background-size: 100% 100%;
+}
+
+.login-logo a, .register-logo a {
+	color: white !important;
+}
+

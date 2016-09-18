@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <RelativeLayout
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:background="@drawable/tlabout">
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_alignParentBottom="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hi!"
+                android:textColor="#000000"
+                android:id="@+id/tvWelcome"
+                android:textSize="65sp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="90dp"/>
+        </FrameLayout>
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="@string/emptyString"-->
+        <!--android:textColor="#000000"-->
+        <!--android:id="@+id/TvUsername"-->
+        <!--android:textSize="50sp"-->
+        <!--android:layout_marginLeft="180dp"-->
+        <!--android:layout_marginTop="110dp"/>-->
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tlLogo"
+            android:src="@drawable/tllogo2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"/>
+    </RelativeLayout>
+</TabHost>

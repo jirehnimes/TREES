@@ -24,7 +24,10 @@ Route::get('/', 'HomeController@index');
 // API Routes
 
 Route::group(['prefix' => 'api'], function () {
+
     Route::get('users', 'UsersController@index');
     Route::get('users/{id}', 'UsersController@show');
-});
 
+    Route::post('sensor', 'SensorDataController@store');
+
+});
