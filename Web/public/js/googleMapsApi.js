@@ -205,7 +205,7 @@ function GoogleMapsApi() {
 	 * @param  string sName variable name
 	 * @return
 	 */
-	this.loadGeoJson = function(sFile, aData, aTrees, oInfoBox) {
+	this.loadGeoJson = function(sFile, aData = null, aTrees = null, oInfoBox= null) {
 		var _that = this;
 		var _aFeatures = sFile.features;
 		var _stateLayer = new google.maps.Data();

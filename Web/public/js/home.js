@@ -25,6 +25,8 @@ $(function() {
 
 	// GeoJson of Montalban
 	var oMontalban = {};
+	var oMarikina = {};
+	var oSanMateo = {};
 
 	// Info box DOM
 	var oInfoBox = $('.info-column');
@@ -74,6 +76,14 @@ $(function() {
 		oMontalban = oResults;
 		gMap.loadGeoJson(oMontalban, aSensorData, aTrees, oInfoBox);
 	});
+	// $.getJSON('geojson/MARIKINA.json', function(oResults) {
+	// 	oMarikina = oResults;
+	// 	gMap.loadGeoJson(oMarikina, aSensorData);
+	// });
+	// $.getJSON('geojson/SANMATEO.json', function(oResults) {
+	// 	oSanMateo = oResults;
+	// 	gMap.loadGeoJson(oSanMateo, aSensorData);
+	// });
 
 	// Load tree markers
 	aTrees.forEach(function(oItem, iIndex) {

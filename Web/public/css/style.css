@@ -1,14 +1,19 @@
 .login-page {
 	background: 
 		linear-gradient(
-			rgba(0, 0, 0, 0.45), 
-			rgba(0, 0, 0, 0.45)
+			rgba(255, 255, 255, 0.4), 
+			rgba(255, 255, 255, 0.4)
 		),
     	url('/img/background.jpg');
 	background-size: 100% 100%;
 }
 
 .login-logo a, .register-logo a {
-	color: white !important;
+	color: green !important;
+	font-size: 1.5em;
 }
 
+.login-box-body {
+	background-color: #33cc33;
+	color: white;
+}
